@@ -2,16 +2,15 @@ import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
 
 export const InputContainer = styled.View`
-  flex: 1;
   padding: 20px;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: -50px;
 `;
 
 export const InputContent = styled.TextInput.attrs((props) => ({
   placeholderTextColor: props.theme.colors.gray_300,
 }))`
-  margin-top: -50px;
   padding: 15px;
   background-color: ${({ theme }) => theme.colors.gray_500};
   height: 54px;
@@ -21,7 +20,6 @@ export const InputContent = styled.TextInput.attrs((props) => ({
 `;
 
 export const InputButton = styled.TouchableOpacity`
-  margin-top: -50px;
   background-color: ${({ theme }) => theme.colors.blue_dark};
   height: 54px;
   border-radius: 6px;

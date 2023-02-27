@@ -25,7 +25,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Home />
-      <StatusBar barStyle="dark-content" />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
     </ThemeProvider>
   );
 }

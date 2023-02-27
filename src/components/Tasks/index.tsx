@@ -46,7 +46,7 @@ export function Tasks() {
           </TasksHeaderFinished>
         </TasksHeader>
         <TasksList>
-          {tasks ? (
+          {tasks.length > 0 ? (
             <TasksListContent>
               {tasks.map((task) => (
                 <TaskContainer>

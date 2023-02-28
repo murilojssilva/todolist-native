@@ -7,17 +7,18 @@ import {
 
 import { useState } from "react";
 
-import tasks from "../../../tasks.json";
+import { taskCreate } from "../../storage/task/taskCreate";
 
 export function Input() {
   const [text, setText] = useState("");
 
-  function handleAddTask(text: string) {
-    tasks.push({
-      checked: false,
-      text: text,
-    });
-    setText("");
+  async function handleAddTask(text: string) {
+    try {
+      await taskCreate({ text: text, checked: false });
+      setText("");
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
